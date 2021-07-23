@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign-in-form {
+  min-width: 215px;
+  background-color: rgb(226, 227, 245);
+  padding: 20px;
+  border-radius: 3px;
+  box-shadow: 1px 3px 14px 0px #938484;
+}
+
+.sign-in-form h3 {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.sign-in-element {
+  position: relative;
+}
+
+.sign-in-element label {
+  position: absolute;
+  top: -2px;
+  /* if we don't add this property (pointer-events: none), we'll not be able to click 'input' element in the area taken by label element */
+  pointer-events: none;
+}
+
+.sign-in-element label span {
+  display: inline-block;
+  transition: 0.5s ease-in-out;
+}
+
+.sign-in-element input {
+  display: block;
+  width: 100%;
+  margin: 32px 0;
+  background-color: transparent;
+  border: none;
+  padding-bottom: 5px;
+  border-bottom: 2px solid white;
+}
+
+.sign-in-element input:focus {
+  outline: 0;
+}
+
+.sign-in-element input:focus + label span,
+.sign-in-element input:valid + label span {
+  transform: translateY(-25px);
+}
+
+.sign-in-btn {
+  /* centering button ===== start ===== */
+  display: block;
+  margin: auto;
+  /* centering button ===== end ===== */
+  padding: 4px 25px;
+}
+
+.register-link {
+  text-align: center;
+  padding-top: 10px;
+  font-size: 12px;
+}
+
+.register-link a {
+  text-decoration: none;
+}
